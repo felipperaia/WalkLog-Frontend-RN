@@ -1,0 +1,28 @@
+{
+  "name": "walklog-frontend",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web",
+    "lint": "eslint . --ext .ts,.tsx"
+  },
+  "dependencies": {
+    "@react-navigation/bottom-tabs": "^6.4.0",
+    "@react-navigation/native": "^6.0.13",
+    "@react-navigation/native-stack": "^6.9.12",
+    "axios": "^1.9.0",
+    "expo": "~53.0.0",
+    "expo-location": "~15.0.1",
+    "expo-sensors": "~12.3.0",
+    "react": "^18.2.0",
+    "react-native": "0.71.0",
+    "react-native-maps": "0.31.1"
+  },
+  "devDependencies": {
+    "@types/axios": "^0.9.36",
+    "@types/react": "^19.1.6",
+    "@types/styled-components-react-native": "^5.2.5"
+  }
+}
