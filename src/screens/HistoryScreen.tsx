@@ -2,11 +2,24 @@ import React, { useEffect, useState } from 'react';
 import { View, Text, FlatList, TouchableOpacity, StyleSheet } from 'react-native';
 import api from '../services/api';
 
-export default function HistoryScreen({ navigation }) {
+import type { StackNavigationProp } from '@react-navigation/stack';
+
+type RootStackParamList = {
+  Detalhes: { id: string };
+  // add other routes here if needed
+};
+
+type HistoryScreenNavigationProp = StackNavigationProp<RootStackParamList, 'Detalhes'>;
+
+interface HistoryScreenProps {
+  navigation: HistoryScreenNavigationProp;
+}
+
+export default function HistoryScreen({ navigation }: HistoryScreenProps) {
   const [walks, setWalks] = useState<Array<any>>([]);
 
   useEffect(() => {
-    api.get('/walks').then((res) => setWalks(res.data));
+    api.get('/walks').then((res) => setWalks(res.data as any[]));
   }, []);
 
   return (

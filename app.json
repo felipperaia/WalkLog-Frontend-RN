@@ -2,11 +2,11 @@
   "expo": {
     "name": "WalkLog",
     "slug": "walklog",
+    "jsEngine": "jsc",
     "scheme": "walklog",
     "platforms": ["ios", "android"],
     "version": "1.0.0",
     "orientation": "portrait",
-    "jsEngine": "hermes",
     "assetBundlePatterns": ["**/*"]
   }
 }
